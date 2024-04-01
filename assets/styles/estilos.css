@@ -10,32 +10,44 @@
     --md: 16px;
     --lg: 24px;
 }
+html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: "Quicksand", sans-serif;
     background-color: #f4f4f4;
-    display: grid;
-    place-items: center;
     height: 100vh;
 }
 
 .login {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: 80%;
     max-width: 300px;
+    height: 100vh;
+    max-height: 100%;
 
 }
 
 /* css new_password */
 
 .form-container {
-    text-align: center;
     
+    text-align: center;
+    height: calc(100vh - 90px);
+    max-height: 100%;
+
     /*   display: grid;
     grid-template-columns: auto 1fr auto;
     width: 300px;*/
@@ -49,7 +61,7 @@ body {
 
 .title {
     font-size: var(--lg);
-    margin-bottom: 36px;
+    margin-bottom: 30px;
     text-align: start;
 }
 
@@ -67,6 +79,14 @@ body {
     display: flex;
     flex-direction: column;
 }
+.form a {
+    color: var(--hospital-green);
+    font-size: var(--sm);
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+}
+
 .label {
     text-align: left;
     font-size: 18px;
@@ -101,6 +121,7 @@ body {
     font-size: var(--md);
     font-weight: bold;
     height: 50px;
+    margin-bottom: 4px;
 }
 
 .primary-button:hover {
@@ -170,23 +191,12 @@ css para password_recovery2
     color: var(--white);
 }
 
-.form a {
-    color: var(--hospital-green);
-    font-size: var(--sm);
-    text-align: center;
-    text-decoration: none;
-    padding: 10px;
-}
-
-.title {
-    margin-bottom: 36px;
-    text-align: start;
-}
 
 /* Estilos responsivos */
 @media (max-width: 640px) {
     .login {
-        width: 90%;
+        width: 70%;
+        height: calc(100vh - 80px);
     }
 
     .logo {
@@ -204,17 +214,17 @@ css para password_recovery2
     }
 
     .secondary-button {
-        margin-top: 200px;
+        margin-top: px;
     }
     .form-container{
         height: 100%;
+        height: calc(100vh - 90px);
+        max-height: 100%;
         
     }
     .form {
-        height: 100%;
+        height: calc(100% - 100px);
         justify-content: space-between;
-    }
-    .login{
-        height: 400px;
+
     }
 }
