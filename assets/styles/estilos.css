@@ -69,7 +69,19 @@ body {
     color: var(--very-light-pink);
     margin-bottom: 20px;
 }
+.value {
 
+    text-align: left;
+    color: var(--very-light-pink);
+    font-size: var(--md);
+    margin: 8px 0 32px 0;
+    background-color: #f2f2f2; /* Color de fondo */
+    width: 100%; /* Ancho completo */
+    padding: 8px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluir el padding en el ancho total */
+    border-radius: 8px;
+    border: 1px var(--very-light-pink); /* Borde de 1px sólido negro */
+}
 .form {
     display: flex;
     flex-direction: column;
