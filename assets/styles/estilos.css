@@ -304,6 +304,9 @@ css para password_recovery2
 .sign-out {
   color: var(--hospital-green) !important;
 }
+/* My order */
+
+
 
 /* Estilos responsivos */
 @media (max-width: 640px) {
