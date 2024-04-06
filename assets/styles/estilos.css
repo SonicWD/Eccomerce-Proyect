@@ -335,7 +335,7 @@ css para password_recovery2
 
 .order {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-around;
   align-items: center;
   background-color: #ffffff;
   border-radius: 8px;
@@ -352,7 +352,8 @@ css para password_recovery2
 .order p:nth-child(2) {
   text-align: end;
   font-weight: bold;
-  color: #333333;
+  font-size: var(--sm);
+  color: var(--very-light-pink);
 }
 
 .order p span:nth-child(1) {
@@ -394,6 +395,10 @@ css para password_recovery2
   font-weight: bold;
   color: #333333;
 }
+.title {
+  font-size: var(--lg);
+  margin-bottom: 40px;
+}
 
 /* Estilos responsivos */
 @media (max-width: 640px) {
@@ -412,6 +417,7 @@ css para password_recovery2
   .title {
     font-size: 20px;
   }
+ 
 
   .subtitle,
   .resend-email {
