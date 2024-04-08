@@ -4,7 +4,7 @@
   --hospital-green: #acd982;
   --difuminado1-bottom: #8fbf6f;
   --difuminado2-bottom: #c6e5b5;
-  --white: #ffffff;
+  --dark-blue: #1a237e --white: #ffffff;
   --black: #000000;
   --sm: 14px;
   --md: 16px;
@@ -19,13 +19,18 @@ body {
   font-family: "Quicksand", sans-serif;
   background-color: #f4f4f4;
   min-height: 100vh;
-}
-
-body {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--very-light-pink);
+}
+
 /*
 .main-container{
     min-height: 100vh;
@@ -42,6 +47,7 @@ body {
   width: 80%;
   max-width: 400px;
 }
+
 /*
 css para password_recovery2
 */
@@ -91,6 +97,7 @@ css para password_recovery2
   height: auto;
   display: none;
 }
+
 
 .title {
   font-size: var(--lg);
@@ -184,6 +191,7 @@ css para password_recovery2
   background-color: var(--difuminado2-bottom);
   color: var(--white);
 }
+
 /*css de la cartas de compra */
 .cards-container {
   display: flex;
@@ -236,6 +244,7 @@ css para password_recovery2
   margin-bottom: 0;
   color: var(--very-light-pink);
 }
+
 /* desktop-menu */
 
 .desktop-menu {
@@ -245,25 +254,31 @@ css para password_recovery2
   border-radius: 6px;
   padding: 20px 20px 0 20px;
 }
+
 .desktop-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .desktop-menu ul li {
   text-align: end;
 }
+
 .desktop-menu ul li:not(:last-child) {
   font-weight: bold;
 }
+
 .desktop-menu ul li:last-child {
   padding-top: 20px;
   border-top: 1px solid var(--very-light-pink);
 }
+
 .desktop-menu ul li:last-child a {
   color: var(--hospital-green);
   font-size: var(--sm);
 }
+
 .desktop-menu ul li a {
   color: var(--back);
   text-decoration: none;
@@ -279,17 +294,20 @@ css para password_recovery2
   height: 92vh;
   padding: 28px;
 }
+
 .mobile-menu a {
   text-decoration: none;
   color: var(--black);
   font-weight: bold;
   /* margin-bottom: 24px; */
 }
+
 .mobile-menu ul {
   padding: 0;
   margin: 24px 0 0;
   list-style: none;
 }
+
 .mobile-menu ul li {
   margin-bottom: 24px;
 }
@@ -301,9 +319,11 @@ css para password_recovery2
 .email {
   font-weight: 300 !important;
 }
+
 .sign-out {
   color: var(--hospital-green) !important;
 }
+
 /* My Order Styles */
 .my-order {
   width: 100%;
@@ -311,19 +331,27 @@ css para password_recovery2
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f4f4f4; /* Fondo añadido para mejorar la visualización */
+  background-color: #f4f4f4;
+  /* Fondo añadido para mejorar la visualización */
 }
 
 .my-order-container {
   display: flex;
   flex-direction: column;
-  width: 60vh; /* Aumentado el ancho para que sea más responsivo */
-  max-width: 800px; /* Ancho máximo para evitar que se estire demasiado en pantallas grandes */
-  background-color: #ffffff; /* Fondo blanco */
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra */
-  padding: 20px; /* Espaciado interno */
-  margin: 20px; /* Margen externo */
+  width: 60vh;
+  /* Aumentado el ancho para que sea más responsivo */
+  max-width: 800px;
+  /* Ancho máximo para evitar que se estire demasiado en pantallas grandes */
+  background-color: #ffffff;
+  /* Fondo blanco */
+  border-radius: 10px;
+  /* Bordes redondeados */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  /* Sombra */
+  padding: 20px;
+  /* Espaciado interno */
+  margin: 20px;
+  /* Margen externo */
 }
 
 .title-order {
@@ -335,7 +363,7 @@ css para password_recovery2
 
 .order {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
   background-color: #ffffff;
   border-radius: 8px;
@@ -395,13 +423,145 @@ css para password_recovery2
   font-weight: bold;
   color: #333333;
 }
+
 .title {
   font-size: var(--lg);
   margin-bottom: 40px;
 }
 
+.menu {
+  display: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+.logo-navbar {
+  width: 100px;
+}
+
+.navbar-left ul,
+.navbar-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.navbar-left {
+  display: flex;
+}
+
+.navbar-left ul {
+  margin-left: 12px;
+}
+
+.navbar-right ul {
+  margin-left: 14px;
+  /* Espacio corregido */
+}
+
+.navbar-left ul li a,
+.navbar-right ul li a {
+  text-decoration: none;
+  color: var(--very-light-pink);
+  border: 1px solid var(--white);
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navbar-left ul li a:hover,
+.navbar-right ul li a:hover {
+  border: 1px solid var(--hospital-green);
+  color: var(--hospital-green);
+  background-color: rgba(0, 128, 0, 0.1);
+}
+
+.email-nav {
+  display: flex;
+  align-items: center;
+  margin-left: 14px;
+
+}
+
+.email-nav img {
+  margin-left: 10px;
+  transform: rotate(90deg);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--very-light-pink);}
+
+.logo-navbar {
+  width: 100px;
+}
+
+.navbar-left ul,
+.navbar-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar-left ul li,
+.navbar-right ul li {
+  margin-left: 12px;
+}
+
+.navbar-left ul li a,
+.navbar-right ul li a {
+  text-decoration: none;
+  color: var(--very-light-pink);
+  border: 1px solid var(--white);
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navbar-left ul li a:hover,
+.navbar-right ul li a:hover {
+  border: 1px solid var(--hospital-green);
+  color: var(--hospital-green);
+  background-color: rgba(0, 128, 0, 0.1);
+}
+
+.email-nav img {
+  margin-left: 10px;
+  transform: rotate(90deg);
+  margin-right: 14px;
+}
+
+.navbar-shopping-cart {
+  position: relative;
+}
+
+.navbar-shopping-cart div {
+  width: 16px;
+  height: 16px;
+  background-color: var(--hospital-green);
+  border-radius: 50%;
+  font-size: var(--sm);
+  font-weight: bold;
+  position: absolute;
+  top: -6px;
+  right: -3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Estilos responsivos */
 @media (max-width: 640px) {
+
   .login,
   .email-send {
     width: 70%;
@@ -417,7 +577,7 @@ css para password_recovery2
   .title {
     font-size: 20px;
   }
- 
+
 
   .subtitle,
   .resend-email {
@@ -455,6 +615,18 @@ css para password_recovery2
   .product-card img {
     width: 140px;
     height: 140px;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .navbar-left ul {
+    display: none;
+  }
+
+  .email-nav {
+    display: none;
   }
  
 }
