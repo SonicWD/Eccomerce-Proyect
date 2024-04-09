@@ -22,6 +22,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 
@@ -438,6 +439,7 @@ css para password_recovery2
   justify-content: space-between;
   align-items: center;
   height: 60px;
+  width: 100%;
   padding: 0 24px;
   border-bottom: 1px solid var(--very-light-pink);
 }
