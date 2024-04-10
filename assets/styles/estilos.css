@@ -590,11 +590,43 @@ css para password_recovery2
   height: auto;
   border-radius: 50%;
 }
+/*ponits abajo de la imagen */
+.points {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin-top: 14px; 
+}
+
+.points li {
+  list-style: none;
+  margin-inline: 10px; /* Reducido el margen para un aspecto más compacto */
+}
+
+.points button {
+  background-color: var(--very-light-pink);
+  border: none;
+  border-radius: 50%;
+  height: 12px; 
+  width: 12px; 
+  padding: 0; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+  vertical-align: middle; 
+}
+
+.points button:hover {
+  background-color: var(--hospital-green); 
+}
+.points .active {
+  border: 2px solid var(--hospital-green); 
+  background-color: var(--hospital-green);
+}
 
 /* Imagen del producto en el detalle */
 .product-detail img:nth-child(2) {
   width: 100%;
-  height: 316px;
+  height: auto;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
@@ -603,6 +635,7 @@ css para password_recovery2
 .product-info-details {
   margin: 24px;
   flex-direction: column;
+  margin-top: 10px;
 }
 
 .product-info-details p {
@@ -633,6 +666,8 @@ css para password_recovery2
   margin-top: 0;
   margin-bottom: 12px;
 }
+
+
 /* Estilos responsivos */
 @media (max-width: 640px) {
   .login,
@@ -655,11 +690,6 @@ css para password_recovery2
   .resend-email {
     font-size: 14px;
   }
-
-  .secondary-button {
-    margin-top: px;
-  }
-
   .form-container,
   .information-container {
     height: 100%;
@@ -702,7 +732,17 @@ css para password_recovery2
   }
   .product-detail {
     width: 100%;
+    height: calc(100vh - 50px);
     margin-left: 12px;
     margin-right: 12px;
+    justify-content: space-between;
+  }
+  .add-to-cart-button{ /* sirve para bajar un boton hasta abajo */
+    position: absolute;
+    bottom: 0;
+    left: 0;  
+    right: 0;
+    margin: 0 auto; 
+
   }
 }
