@@ -98,7 +98,7 @@ css para password_recovery2
 
 .title {
   font-size: var(--lg);
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   text-align: start;
 }
 
@@ -157,11 +157,13 @@ css para password_recovery2
   font-size: var(--md);
 }
 
+
+
 .primary-button,
 .secondary-button {
   padding: 10px 20px;
   background-color: var(--hospital-green);
-  color: #ffffff;
+  color: var(--white);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -169,8 +171,10 @@ css para password_recovery2
   font-size: var(--md);
   font-weight: bold;
   height: 50px;
-  margin-bottom: 4px;
+  width: 250px;
+  margin: 10px 0; /* Margen vertical a los botones */
 }
+
 
 .primary-button:hover {
   background-color: var(--difuminado1-bottom);
@@ -337,19 +341,26 @@ css para password_recovery2
   display: flex;
   flex-direction: column;
   width: 60vh;
-  /* Aumentado el ancho para que sea más responsivo */
   max-width: 800px;
-  /* Ancho máximo para evitar que se estire demasiado en pantallas grandes */
   background-color: #ffffff;
-  /* Fondo blanco */
   border-radius: 10px;
-  /* Bordes redondeados */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  /* Sombra */
   padding: 20px;
-  /* Espaciado interno */
   margin: 20px;
-  /* Margen externo */
+  align-items: center;
+  height: 100%;
+}
+.my-order-content{
+ 
+  width: 100%;
+}
+.my-order-content .primary-button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Centra los elementos verticalmente */
+  align-items: center;
+  margin: 0;
 }
 
 .title-order {
@@ -362,13 +373,18 @@ css para password_recovery2
 .order {
   display: flex;
   justify-content: space-between;
+  gap: 16px;
+  height: 100%;
   align-items: center;
-  background-color: #ffffff;
+  background-color: var(--text-input-field);
   border-radius: 8px;
-  padding: 12px 20px;
+  padding: 0 24px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  margin-bottom:30px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
+
 
 .order p:nth-child(1) {
   display: flex;
@@ -393,16 +409,20 @@ css para password_recovery2
   color: var(--hospital-green);
 }
 
-.shopping-cart {
-  display: flex;
-  justify-content: space-around;
+.shopping-cart { /* se ve mejor con grid que con felx para este caso en especifico pelotudo */
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
   align-items: center;
-  background-color: #ffffff;
+  background-color: var(--white);
   border-radius: 8px;
   padding: 12px 20px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  margin: 12px;
+  gap: 16px;
+
 }
+
 
 .shopping-cart figure {
   margin: 0;
@@ -417,19 +437,14 @@ css para password_recovery2
 }
 
 .shopping-cart p:nth-child(2) {
-  color: var(--hospital-green);
-}
+  color: var(--very-light-pink);}
 
 .shopping-cart p:nth-child(3) {
-  font-size: 14px;
+  font-size: var(--md);
   font-weight: bold;
   color: #333333;
 }
 
-.title {
-  font-size: var(--lg);
-  margin-bottom: 40px;
-}
 
 .menu {
   display: none;
@@ -550,6 +565,7 @@ css para password_recovery2
 }
 /* Detalle del producto */
 .product-detail {
+  
   width: 360px;
   margin: auto; /* Centra el contenedor vertical y horizontalmente */
   height: 100%;
@@ -667,6 +683,24 @@ css para password_recovery2
   margin-top: 0;
   margin-bottom: 12px;
 }
+/* Carrito de compras */
+.shopping {
+  position: absolute;
+  right: 0;
+}
+.title-shopping{
+  font-size: var(--lg);
+  font-weight: bold;
+}
+.title-container{
+  padding: 12px;
+  display: flex;
+}
+.title-container img {
+  transform: rotate(180deg);
+  margin-right: 24px;
+}
+
 
 
 /* Estilos responsivos */
