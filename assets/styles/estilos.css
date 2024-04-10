@@ -558,7 +558,8 @@ css para password_recovery2
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden; /* Evita desbordamiento */
   position: relative;
-  margin: 12px 0;
+  margin: 12px ;
+  
 }
 
 /* Botón para cerrar el detalle del producto */
@@ -733,8 +734,7 @@ css para password_recovery2
   .product-detail {
     width: 100%;
     height: calc(100vh - 50px);
-    margin-left: 12px;
-    margin-right: 12px;
+    margin: 12px ;
     justify-content: space-between;
   }
   .add-to-cart-button{ /* sirve para bajar un boton hasta abajo */
